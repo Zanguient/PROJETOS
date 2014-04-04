@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 342
+  Height = 240
+  Top = 285
+  Width = 338
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 338
+  OnShow = FormShow
+  LCLVersion = '1.2.0.3'
+  object bAtivar: TButton
+    Left = 152
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Ativar'
+    OnClick = bAtivarClick
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 232
+    Height = 25
+    Top = 8
+    Width = 96
+    Caption = 'Menu Opcoes'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object ComboBox1: TComboBox
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 137
+    ItemHeight = 15
+    Items.Strings = (
+      'tpvNenhum'
+      'tpvManual'
+      'tpvPafECF'
+      'tpvNFCe'
+      'tpvNFe'
+    )
+    OnChange = ComboBox1Change
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 232
+    Height = 25
+    Top = 75
+    Width = 96
+    Caption = 'Abrir Venda'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 232
+    Height = 25
+    Top = 107
+    Width = 96
+    Caption = 'Vender Item'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Button4: TButton
+    Left = 232
+    Height = 25
+    Top = 139
+    Width = 96
+    Caption = 'Fechar Venda'
+    OnClick = Button4Click
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 232
+    Height = 25
+    Top = 43
+    Width = 96
+    Caption = 'Menu Fiscal'
+    OnClick = Button5Click
+    TabOrder = 6
+  end
+end

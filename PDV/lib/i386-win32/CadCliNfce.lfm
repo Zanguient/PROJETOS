@@ -1,0 +1,478 @@
+object FrmCadCliNfce: TFrmCadCliNfce
+  Left = 335
+  Height = 271
+  Top = 236
+  Width = 701
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = 'Identificação do Cliente'
+  ClientHeight = 271
+  ClientWidth = 701
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  LCLVersion = '1.0.14.0'
+  object panelBotoes: TPanel
+    Left = 216
+    Height = 27
+    Top = 229
+    Width = 476
+    BevelOuter = bvNone
+    ClientHeight = 27
+    ClientWidth = 476
+    TabOrder = 0
+    OnClick = panelBotoesClick
+    object panelF1: TPanel
+      Left = 3
+      Height = 25
+      Hint = 'F1 - Identifica Cliente'
+      Top = 2
+      Width = 158
+      BevelOuter = bvNone
+      ClientHeight = 25
+      ClientWidth = 158
+      TabOrder = 0
+      OnMouseEnter = panelF1MouseEnter
+      OnMouseLeave = panelF1MouseLeave
+      object labelF1: TLabel
+        Left = 30
+        Height = 14
+        Hint = 'F1 - Identifica Cliente'
+        Top = 5
+        Width = 100
+        Caption = 'F1 - Identifica Cliente'
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+        OnMouseEnter = panelF1MouseEnter
+        OnMouseLeave = panelF1MouseLeave
+      end
+      object imageF1: TImage
+        Left = 2
+        Height = 21
+        Hint = 'F1 - Identifica Cliente'
+        Top = 2
+        Width = 21
+        OnMouseEnter = panelF1MouseEnter
+        OnMouseLeave = panelF1MouseLeave
+        Stretch = True
+        Transparent = True
+      end
+    end
+    object panelF2: TPanel
+      Left = 160
+      Height = 25
+      Hint = 'PgDown - Confirmar'
+      Top = 2
+      Width = 158
+      BevelOuter = bvNone
+      ClientHeight = 25
+      ClientWidth = 158
+      TabOrder = 1
+      OnMouseEnter = panelF2MouseEnter
+      OnMouseLeave = panelF2MouseLeave
+      object labelF2: TLabel
+        Left = 30
+        Height = 14
+        Hint = 'PgDown - Confirmar'
+        Top = 5
+        Width = 95
+        Caption = 'PgDown - Confirmar'
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+        OnMouseEnter = panelF2MouseEnter
+        OnMouseLeave = panelF2MouseLeave
+      end
+      object imageF2: TImage
+        Left = 2
+        Height = 21
+        Hint = 'F2 - Menu Principal'
+        Top = 2
+        Width = 21
+        OnMouseEnter = panelF2MouseEnter
+        OnMouseLeave = panelF2MouseLeave
+        Stretch = True
+        Transparent = True
+      end
+    end
+    object panelF3: TPanel
+      Left = 317
+      Height = 25
+      Hint = 'ESC - Cancelar'
+      Top = 2
+      Width = 158
+      BevelOuter = bvNone
+      ClientHeight = 25
+      ClientWidth = 158
+      TabOrder = 2
+      OnMouseEnter = panelF3MouseEnter
+      OnMouseLeave = panelF3MouseLeave
+      object labelF3: TLabel
+        Left = 30
+        Height = 14
+        Hint = 'ESC - Cancelar'
+        Top = 5
+        Width = 73
+        Caption = 'ESC - Cancelar'
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+        OnMouseEnter = panelF3MouseEnter
+        OnMouseLeave = panelF3MouseLeave
+      end
+      object imageF3: TImage
+        Left = 2
+        Height = 21
+        Hint = 'F3 - Menu OperaÃ§Ãµes'
+        Top = 2
+        Width = 21
+        OnMouseEnter = panelF3MouseEnter
+        OnMouseLeave = panelF3MouseLeave
+        Stretch = True
+        Transparent = True
+      end
+    end
+  end
+  object panPeriodo: TPanel
+    Left = 7
+    Height = 208
+    Top = 8
+    Width = 685
+    ClientHeight = 208
+    ClientWidth = 685
+    TabOrder = 1
+    object LblNmRz: TLabel
+      Left = 8
+      Height = 14
+      Top = 8
+      Width = 35
+      Caption = 'NOME:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtNmRz: TEdit
+      Left = 8
+      Height = 21
+      Top = 26
+      Width = 405
+      CharCase = ecUppercase
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 14
+      Top = 58
+      Width = 24
+      Caption = 'CEP:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtCEP: TMaskEdit
+      Left = 8
+      Height = 21
+      Top = 76
+      Width = 92
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      MaxLength = 9
+      ParentFont = False
+      TabOrder = 1
+      EditMask = '00000\-999;1;_'
+      Text = '     -   '
+      SpaceChar = '_'
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 14
+      Top = 108
+      Width = 48
+      Caption = 'BAIRRO:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtBairro: TEdit
+      Left = 8
+      Height = 21
+      Top = 127
+      Width = 191
+      CharCase = ecUppercase
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Label6: TLabel
+      Left = 8
+      Height = 14
+      Top = 157
+      Width = 56
+      Caption = 'TELEFONE:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtFone: TMaskEdit
+      Left = 8
+      Height = 21
+      Top = 176
+      Width = 128
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      MaxLength = 13
+      ParentFont = False
+      TabOrder = 3
+      EditMask = '(00)0000-0000;0;_'
+      SpaceChar = '_'
+    end
+    object Label8: TLabel
+      Left = 142
+      Height = 14
+      Top = 157
+      Width = 53
+      Caption = 'CELULAR:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtCelular: TMaskEdit
+      Left = 142
+      Height = 21
+      Top = 176
+      Width = 128
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      MaxLength = 13
+      ParentFont = False
+      TabOrder = 4
+      EditMask = '(00)0000-0000;0;_'
+      SpaceChar = '_'
+    end
+    object Label7: TLabel
+      Left = 276
+      Height = 14
+      Top = 157
+      Width = 39
+      Caption = 'EMAIL:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtEmail: TEdit
+      Left = 276
+      Height = 21
+      Top = 176
+      Width = 401
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+    end
+    object Label4: TLabel
+      Left = 205
+      Height = 14
+      Top = 108
+      Width = 18
+      Caption = 'UF:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object CBoxUF: TComboBox
+      Left = 205
+      Height = 21
+      Top = 127
+      Width = 65
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ItemHeight = 13
+      ParentFont = False
+      TabOrder = 6
+      Text = 'CE'
+    end
+    object Label5: TLabel
+      Left = 276
+      Height = 14
+      Top = 108
+      Width = 66
+      Caption = 'MUNICIPIO:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtMunicipio: TEdit
+      Left = 276
+      Height = 21
+      Top = 127
+      Width = 401
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 7
+    end
+    object EdtCpfCnpj: TMaskEdit
+      Left = 419
+      Height = 21
+      Top = 26
+      Width = 146
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      MaxLength = 14
+      ParentFont = False
+      TabOrder = 8
+      EditMask = '000.000.000\-99;0;_'
+      Text = '03477181328'
+      SpaceChar = '_'
+    end
+    object LblCpfCnpj: TLabel
+      Left = 419
+      Height = 14
+      Top = 8
+      Width = 24
+      Caption = 'CPF:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 571
+      Height = 14
+      Top = 8
+      Width = 15
+      Caption = 'IE:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtIE: TEdit
+      Left = 571
+      Height = 21
+      Top = 26
+      Width = 106
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 9
+      Text = 'ISENTO'
+    end
+    object LblNumero: TLabel
+      Left = 571
+      Height = 14
+      Top = 58
+      Width = 51
+      Caption = 'NÚMERO:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtNumero: TEdit
+      Left = 571
+      Height = 21
+      Top = 76
+      Width = 106
+      CharCase = ecUppercase
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 10
+    end
+    object LblEndereco: TLabel
+      Left = 106
+      Height = 14
+      Top = 58
+      Width = 60
+      Caption = 'ENDEREÇO:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object EdtEndereco: TEdit
+      Left = 106
+      Height = 21
+      Top = 76
+      Width = 459
+      CharCase = ecUppercase
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 11
+    end
+  end
+end

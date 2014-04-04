@@ -1,0 +1,144 @@
+object FrmCadTipPes: TFrmCadTipPes
+  Left = 416
+  Height = 108
+  Top = 216
+  Width = 290
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Tipo Pessoa'
+  ClientHeight = 108
+  ClientWidth = 290
+  LCLVersion = '1.2.0.3'
+  object panPeriodo: TPanel
+    Left = 6
+    Height = 64
+    Top = 8
+    Width = 278
+    ClientHeight = 64
+    ClientWidth = 278
+    TabOrder = 0
+    object Label4: TLabel
+      Left = 10
+      Height = 13
+      Top = 9
+      Width = 76
+      Caption = 'TIPO PESSOA:'
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object ComboBox1: TComboBox
+      Left = 10
+      Height = 24
+      Top = 28
+      Width = 259
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold]
+      ItemHeight = 16
+      Items.Strings = (
+        'FISICA'
+        'JURIDICA'
+      )
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object panelBotoes: TPanel
+    Left = 6
+    Height = 27
+    Top = 75
+    Width = 297
+    BevelOuter = bvNone
+    ClientHeight = 27
+    ClientWidth = 297
+    TabOrder = 1
+    OnClick = panelBotoesClick
+    object panelF1: TPanel
+      Left = 3
+      Height = 25
+      Hint = 'PgDown - Confirmar'
+      Top = 2
+      Width = 135
+      BevelOuter = bvNone
+      ClientHeight = 25
+      ClientWidth = 135
+      TabOrder = 0
+      OnClick = panelF1Click
+      OnMouseEnter = panelF1MouseEnter
+      OnMouseLeave = panelF1MouseLeave
+      object labelF1: TLabel
+        Left = 30
+        Height = 13
+        Hint = 'PgDown - Confirmar'
+        Top = 5
+        Width = 94
+        Caption = 'PgDown - Confirmar'
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+        OnClick = panelF1Click
+        OnMouseEnter = panelF1MouseEnter
+        OnMouseLeave = panelF1MouseLeave
+      end
+      object imageF1: TImage
+        Left = 2
+        Height = 21
+        Hint = 'PgDown - Confirmar'
+        Top = 2
+        Width = 21
+        OnClick = panelF1Click
+        OnMouseEnter = panelF1MouseEnter
+        OnMouseLeave = panelF1MouseLeave
+        Stretch = True
+        Transparent = True
+      end
+    end
+    object panelF2: TPanel
+      Left = 142
+      Height = 25
+      Hint = 'Esc - Cancelar'
+      Top = 2
+      Width = 135
+      BevelOuter = bvNone
+      ClientHeight = 25
+      ClientWidth = 135
+      TabOrder = 1
+      OnClick = panelF2Click
+      OnMouseEnter = panelF2MouseEnter
+      OnMouseLeave = panelF2MouseLeave
+      object labelF2: TLabel
+        Left = 30
+        Height = 13
+        Hint = 'Esc - Cancelar'
+        Top = 5
+        Width = 69
+        Caption = 'Esc - Cancelar'
+        Font.Color = clNavy
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+        OnMouseEnter = panelF2MouseEnter
+        OnMouseLeave = panelF2MouseLeave
+      end
+      object imageF2: TImage
+        Left = 2
+        Height = 21
+        Hint = 'Esc - Cancelar'
+        Top = 2
+        Width = 21
+        OnMouseEnter = panelF2MouseEnter
+        OnMouseLeave = panelF2MouseLeave
+        Stretch = True
+        Transparent = True
+      end
+    end
+  end
+end

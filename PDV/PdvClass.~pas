@@ -1,0 +1,84 @@
+unit PdvClass;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, PdvConst;
+
+type
+
+  { TPDVClass }
+
+  TPDVClass = class
+    private
+      procedure SetAtivo(AValue: Boolean);
+    protected
+      fpOwner  : TComponent ;   { Componente PDV }
+      fpAtivo  : Boolean ;
+      fpEstado : TPDVEstado;
+    public
+      constructor create( AOwner : TComponent ) ;
+      Destructor Destroy  ; override ;
+
+      Property Ativo  : Boolean read fpAtivo write SetAtivo ;
+      procedure Ativar ; virtual ;
+      procedure Desativar ; virtual ;
+  end;
+
+
+implementation
+uses Pdv;
+
+{ TPDVClass }
+
+procedure TPDVClass.SetAtivo(AValue: Boolean);
+begin
+  if AValue then
+    Ativar
+  else
+    Desativar ;
+end;
+
+constructor TPDVClass.create(AOwner: TComponent);
+begin
+ //{ TODO : Verificar EACBECFERRO }
+ // if not (AOwner is TPDV) then
+ //   raise EACBrECFErro.create( ACBrStr(cACBrECFClassCreateException) );
+
+  fpOwner  := AOwner ;
+
+  { Variaveis Protected fp___ acessiveis pelas Classes filhas }
+  fpAtivo  := false ;
+  fpEstado := estNaoInicializada ;
+
+end;
+
+destructor TPDVClass.Destroy;
+begin
+  Desativar ;
+
+  inherited Destroy ;
+end;
+
+procedure TPDVClass.Ativar;
+begin
+  if fpAtivo then Exit ;
+
+  fpEstado := estDesconhecido ;
+  fpAtivo  := true ;
+end;
+
+procedure TPDVClass.Desativar;
+begin
+
+  fpEstado := estNaoInicializada ;
+
+  if not fpAtivo then Exit ;
+
+  fpAtivo := false ;
+end;
+
+end.
+

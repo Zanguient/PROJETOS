@@ -1,0 +1,117 @@
+unit Pdv;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, PdvClass;
+
+type
+
+  TPDVTipoVenda = (tpvNenhum, tpvManual, tpvPafECF, tpvNFCe, tpvNFe);
+
+  { TPDV }
+
+  TPDV = class(TComponent)
+    private
+      { Propriedades do Componente PDV }
+      fsAtivo: boolean;
+      fsTipoVenda: TPDVTipoVenda;
+      fsPDV: TPDVClass;  { Classe com instancia do PDV de fsTipoVenda }
+
+      procedure SetAtivo(const AValue: boolean);
+      procedure SetTipoVenda(AValue: TPDVTipoVenda);
+    public
+      constructor Create(AOwner: TComponent); override;
+      destructor Destroy; override;
+
+      procedure Ativar;
+      procedure Desativar;
+      property Ativo: boolean read fsAtivo write SetAtivo;
+    published
+      property TipoVenda : TPDVTipoVenda read fsTipoVenda write SetTipoVenda
+                 default tpvNenhum ;
+  end;
+
+
+implementation
+uses PdvManual;
+
+{ TPDV }
+
+procedure TPDV.SetAtivo(const AValue: boolean);
+begin
+  if AValue then
+    Ativar
+  else
+    Desativar ;
+end;
+
+procedure TPDV.SetTipoVenda(AValue: TPDVTipoVenda);
+begin
+  if fsTipoVenda = AValue then exit ;
+
+  { TODO : Verificar EACBrECFErro }
+  //if fsAtivo then
+  //   raise EACBrECFErro.Create( ACBrStr(cACBrECFSetModeloException));
+
+  FreeAndNil( fsPDV ) ;
+
+  { Instanciando uma nova classe de acordo com fsModelo }
+  case AValue of
+    tpvManual    : fsPDV := TPDVManual.create( Self ) ;
+
+    //ecfECFVirtual: fsECF := fsECFVirtual.ECFClass;
+  else
+    fsPDV := TPDVClass.create( Self ) ;
+  end;
+
+  fsTipoVenda := AValue;
+end;
+
+constructor TPDV.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+
+  fsAtivo := false ;
+
+  { Instanciando fsPDV com modelo Generico (PDVClass) }
+  fsPDV := TPDVClass.Create(self);
+end;
+
+destructor TPDV.Destroy;
+begin
+  Ativo := false ;
+
+  if Assigned(fsPDV) then
+    FreeAndNil(fsPDV);
+
+  inherited Destroy;
+
+end;
+
+procedure TPDV.Ativar;
+begin
+  if fsAtivo then exit ;
+
+  { TODO : Verificar EACBRECFERRO }
+  //if fsTipoVenda = tpvNenhum then
+  //   raise EACBrECFErro.Create( ACBrStr('Modelo não definido'));     }
+
+  fsPDV.Ativar ;
+  fsAtivo := true ;
+
+end;
+
+procedure TPDV.Desativar;
+begin
+  if not fsAtivo then exit ;
+
+  fsPDV.Desativar ;
+  fsAtivo := false;
+
+end;
+
+end.
+

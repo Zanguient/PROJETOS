@@ -1,0 +1,45 @@
+unit DmPDV;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, PdvBD;
+
+type
+
+  { TPDVDm }
+
+  TPDVDm = class(TDataModule)
+  private
+    { private declarations }
+  public
+    { public declarations }
+    function ConsultaProduto(CodigoConsulta:String): TProduto;
+  end;
+
+var
+  PDVDm: TPDVDm;
+
+implementation
+
+{$R *.lfm}
+
+{ TPDVDm }
+
+function TPDVDm.ConsultaProduto(CodigoConsulta:String): TProduto;
+var
+  WProduto: TProduto;
+begin
+  WProduto := TProduto.Create;
+  //WProduto.Codigo    := StrToInt(CodigoConsulta);
+  //WProduto.Cod_EAN   := '';
+  //WProduto.Descricao := '';
+
+  Result := WProduto;
+
+end;
+
+end.
+

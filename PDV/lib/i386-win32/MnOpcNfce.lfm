@@ -1,0 +1,8 @@
+object FrmMnOpcNfce: TFrmMnOpcNfce
+  Left = 267
+  Height = 240
+  Top = 240
+  Width = 320
+  Caption = 'Menu Opcoes NFCe'
+  LCLVersion = '1.0.14.0'
+end

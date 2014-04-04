@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\2.6.2\bin\x86_64-win64\fpc.exe" Date="1131443479"/>
+  <Params Value=" -Mdelphi -Scghi -O1 -g -gl -WG -vewnhi -FiC:\Users\viktor\Documents\DELPHI\Borland\Delphi7\Source\Vcl -FiC:\Users\viktor\Documents\DELPHI\Borland\Delphi7\Source\Rtl\Common -FuC:\Users\viktor\Documents\DELPHI\Borland\Delphi7\Source\Vcl -FuC:\Users\viktor\Documents\DELPHI\Borland\Delphi7\Source\Rtl\Common -FuC:\Users\viktor\Documents\PDV_LINUX\ -l Project1.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

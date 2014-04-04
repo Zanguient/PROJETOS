@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="Project1"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="ACBrSerial"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LazControls"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="17">
+      <Unit0>
+        <Filename Value="Project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Project1"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Pdv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Pdv"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="PdvClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvClass"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="PdvConst.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvConst"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="PdvManual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvManual"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="PdvPafEcf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvPafEcf"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="MnOpcNfce.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMnOpcNfce"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MnOpcNfce"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="MnOpcPafECF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMnOpcPafECF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MnOpcPafECF"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="PdvNFCe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvNFCe"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="PdvBD.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvBD"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="CadCliNfce.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="CadCliNfce.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadCliNfce"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadCliNfce"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="CadCliPafEcf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadCliPafEcf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadCliPafEcf"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="CadTipPes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadTipPes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadTipPes"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="DmPDV.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PDVDm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DmPDV"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="MnFisPafEcf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMnFisPafEcf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MnFisPafEcf"/>
+      </Unit16>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="Project1"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="."/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="5">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EACBrECFTimeOut"/>
+      </Item4>
+      <Item5>
+        <Name Value="ESynaSerError"/>
+      </Item5>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,152 @@
+object FrmMnFisPafEcf: TFrmMnFisPafEcf
+  Left = 404
+  Height = 448
+  Top = 259
+  Width = 539
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Menu Fiscal Paf ECF'
+  ClientHeight = 448
+  ClientWidth = 539
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  LCLVersion = '1.0.14.0'
+  object panPeriodo: TPanel
+    Left = 4
+    Height = 439
+    Top = 4
+    Width = 531
+    ClientHeight = 439
+    ClientWidth = 531
+    TabOrder = 0
+    OnClick = panPeriodoClick
+    object panelBotoes: TPanel
+      Left = 4
+      Height = 143
+      Top = 12
+      Width = 524
+      BevelOuter = bvNone
+      ClientHeight = 143
+      ClientWidth = 524
+      TabOrder = 0
+      object panelF1: TPanel
+        Left = 3
+        Height = 31
+        Hint = 'F1 - Identifica Cliente'
+        Top = 2
+        Width = 245
+        BevelOuter = bvNone
+        ClientHeight = 31
+        ClientWidth = 245
+        TabOrder = 0
+        OnMouseEnter = panelF1MouseEnter
+        OnMouseLeave = panelF1MouseLeave
+        object labelF1: TLabel
+          Left = 9
+          Height = 21
+          Hint = 'F1 - Identifica Cliente'
+          Top = 5
+          Width = 178
+          Caption = 'F1 - Leitura X (LX)'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Verdana'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          OnMouseEnter = panelF1MouseEnter
+          OnMouseLeave = panelF1MouseLeave
+        end
+      end
+      object panelF2: TPanel
+        Left = 275
+        Height = 31
+        Hint = 'PgDown - Confirmar'
+        Top = 2
+        Width = 245
+        BevelOuter = bvNone
+        ClientHeight = 31
+        ClientWidth = 245
+        TabOrder = 1
+        OnMouseEnter = panelF2MouseEnter
+        OnMouseLeave = panelF2MouseLeave
+        object labelF2: TLabel
+          Left = 10
+          Height = 21
+          Hint = 'PgDown - Confirmar'
+          Top = 5
+          Width = 138
+          Caption = 'F2 - Confirmar'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Verdana'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          OnMouseEnter = panelF2MouseEnter
+          OnMouseLeave = panelF2MouseLeave
+        end
+      end
+      object panelF3: TPanel
+        Left = 3
+        Height = 31
+        Hint = 'ESC - Cancelar'
+        Top = 48
+        Width = 245
+        BevelOuter = bvNone
+        ClientHeight = 31
+        ClientWidth = 245
+        TabOrder = 2
+        OnMouseEnter = panelF3MouseEnter
+        OnMouseLeave = panelF3MouseLeave
+        object labelF3: TLabel
+          Left = 9
+          Height = 21
+          Hint = 'ESC - Cancelar'
+          Top = 5
+          Width = 125
+          Caption = 'F3 - Cancelar'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Verdana'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          OnMouseEnter = panelF3MouseEnter
+          OnMouseLeave = panelF3MouseLeave
+        end
+      end
+      object panelF4: TPanel
+        Left = 275
+        Height = 31
+        Hint = 'ESC - Cancelar'
+        Top = 48
+        Width = 245
+        BevelOuter = bvNone
+        ClientHeight = 31
+        ClientWidth = 245
+        TabOrder = 3
+        OnMouseEnter = panelF4MouseEnter
+        OnMouseLeave = panelF4MouseLeave
+        object labelF4: TLabel
+          Left = 9
+          Height = 21
+          Hint = 'ESC - Cancelar'
+          Top = 5
+          Width = 125
+          Caption = 'F3 - Cancelar'
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Verdana'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+          OnMouseEnter = panelF4MouseEnter
+          OnMouseLeave = panelF4MouseLeave
+        end
+      end
+    end
+  end
+end

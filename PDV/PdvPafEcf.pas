@@ -1,0 +1,285 @@
+unit PdvPafEcf;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, ACBrECF, ACBrDevice, PdvClass, PdvBD;
+
+type
+
+
+  { TPDVPafEcf }
+
+  TPDVPafEcf = class( TPDVClass )
+    private
+      ECF_ACBR: TACBrECF;
+    public
+      Constructor create( AOwner : TComponent  )  ;
+      Destructor Destroy  ; override ;
+
+      procedure Ativar ; override ;
+      procedure Desativar ; override ;
+
+      procedure AbreVenda; override;
+      procedure VendeItem(PProduto: TProduto); override;
+      procedure FechaVenda; override;
+      procedure MenuOpcoes; override;
+      procedure MenuFiscal; override;
+  end;
+
+  const
+  Estados : array[TACBrECFEstado] of string =
+    ('Não Inicializada', 'Desconhecido', 'Livre', 'Venda',
+    'Pagamento', 'Relatório', 'Bloqueada', 'Requer Z', 'Requer X', 'Nao Fiscal' );
+
+implementation
+
+uses MnOpcPafECF, CadCliPafEcf, MnFisPafEcf;
+
+{ TPDVPafEcf }
+
+constructor TPDVPafEcf.create(AOwner: TComponent);
+begin
+  inherited create( AOwner ) ;
+  ECF_ACBR := TACBrECF.Create(ECF_ACBR);
+end;
+
+destructor TPDVPafEcf.Destroy;
+begin
+  inherited Destroy;
+end;
+
+procedure TPDVPafEcf.Ativar;
+begin
+  inherited Ativar;
+
+  //ECF.Device.Parity :=
+  ECF_ACBR.Device.Baud         := 9600;
+  ECF_ACBR.Device.HandShake    := TACBrHandShake(2);
+  ECF_ACBR.Device.MaxBandwidth := 0;
+
+  //ACBrConsts.cACBrMsgPoucoPapel := 0;
+  //ECF_ACBR.OnMsgPoucoPapel := ECF_ACBR_EVENTOS.ECF_ACBR_MsgPoucoPapel;
+
+  ECF_ACBR.ArredondaItemMFD := False;
+
+  ECF_ACBR.Desativar;  //caso tenha forçado o fechamento do exe
+
+  ECF_ACBR.Porta                := 'COM9';
+  ECF_ACBR.MaxLinhasBuffer      := 3;
+  ECF_ACBR.LinhasEntreCupons    := 5;
+  ECF_ACBR.IntervaloAposComando := 5;
+  ECF_ACBR.ReTentar             := True;
+  ECF_ACBR.Timeout              := 3;
+
+  ECF_ACBR.Modelo               := ecfSwedaSTX;
+
+  //ECF_ACBR.ArqLOG := ExtractFilePath( Application.ExeName ) + 'AUDITORIA_INFARMA_PDV.TXT';
+
+  {if ECF_Marca = 'BEMATECH' then
+    ECF_ACBR.Modelo:= ecfBematech
+  else
+  if ECF_Marca = 'SWEDA' then
+    ECF_ACBR.Modelo:= ecfSwedaSTX
+  else
+  if ECF_Marca = 'SWEDAX' then
+    ECF_ACBR.Modelo:= ecfSweda
+  else
+  if ECF_Marca = 'DARUMA' then
+    ECF_ACBR.Modelo:= ecfDaruma
+  else
+  if ECF_Marca = 'SCHALTER' then
+    ECF_ACBR.Modelo:= ecfSchalter
+  else
+  if ECF_Marca = 'ELGIN' then
+    begin
+      ECF_ACBR.Modelo:= ecfFiscNET;
+      ECF_DEVICE.Parity := pEven;
+    end
+  else
+  if ECF_Marca = 'YANCO' then
+    ECF_ACBR.Modelo:= ecfYanco
+  else
+  if ECF_Marca = 'DATAREGIS' then
+    ECF_ACBR.Modelo:= ecfDataRegis
+  else
+  if ECF_Marca = 'URANO' then
+    begin
+      ECF_ACBR.Modelo   := ecfFiscNET;
+      ECF_DEVICE.Parity := pEven;
+    end
+  else
+  if ECF_Marca = 'EPSON' then
+    ECF_ACBR.Modelo:= ecfEpson
+  else
+    begin
+      MessageDlg('Marca de impressora ainda não implementada.',mtError,[mbOk],0);
+      Abort;
+    end;    }
+
+
+
+  //try
+
+   ECF_ACBR.Ativar;
+   ECF_ACBR.ReTentar := False; //caso ecf esteja desligado não retenta a ativação
+
+  //except
+    //se impressora estiver desligada ela entra como manual (exigencia HOMOLOGAÇÃO PAF)
+   // ECF_OFFLINE := True;
+  //end;
+
+end;
+
+procedure TPDVPafEcf.Desativar;
+begin
+  inherited Desativar;
+end;
+
+procedure TPDVPafEcf.AbreVenda;
+begin
+
+  try
+    FrmCadCliPafEcf := TFrmCadCliPafEcf.Create(nil);
+    FrmCadCliPafEcf.PTipPessoa := fpCliente.TipoPessoa;
+    FrmCadCliPafEcf.ShowModal;
+    fpCliente.Nome_RzSocial := FrmCadCliPafEcf.EdtNmRz.Text;
+    fpCliente.Cpf_Cnpj      := FrmCadCliPafEcf.EdtCpfCnpj.Text;
+    fpCliente.Endereco      := FrmCadCliPafEcf.EdtEndereco.Text;
+
+    try
+      ECF_ACBR.AbreCupom(fpCliente.Cpf_Cnpj,fpCliente.Nome_RzSocial,fpCliente.Endereco,False);
+    except
+    end;
+
+    if Estados[ECF_ACBR.Estado] <> 'Livre' then
+      fpVendaAberta := True;
+
+  finally
+    FrmCadCliPafEcf.Free;
+  end;
+
+end;
+
+procedure TPDVPafEcf.VendeItem(PProduto: TProduto);
+begin
+
+end;
+
+procedure TPDVPafEcf.FechaVenda;
+begin
+
+end;
+
+procedure TPDVPafEcf.MenuOpcoes;
+begin
+  FrmMnOpcPafECF.ShowModal;
+end;
+
+procedure TPDVPafEcf.MenuFiscal;
+begin
+
+  FrmMnFisPafEcf := TFrmMnFisPafEcf.Create(nil);
+  try
+
+    FrmMnFisPafEcf.ShowModal;
+    if (FrmMnFisPafEcf.ModalResult = 1) then
+    begin
+
+      case StrToInt(FrmMnFisPafEcf.POpcTec) of
+        01: begin
+              if fpVendaAberta then
+                Abort;
+              try
+                ECF_ACBR.LeituraX;
+              except
+              end;
+            end;
+       { 02: begin
+              if not TestaToleranciaHoraEcf then
+                Abort;
+              MemDatEdForm := TMemDatEdForm.Create(Self);
+              MemDatEdForm.ShowModal;
+            end;
+        03: begin
+              if not TestaToleranciaHoraEcf then
+                Abort;
+              MemSimEdForm := TMemSimEdForm.Create(Self);
+              MemSimEdForm.ShowModal;
+            end;
+        04: begin
+              if not TestaToleranciaHoraEcf then
+                Abort;
+              MemMfdEdForm := TMemMfdEdForm.Create(Self);
+              MemMfdEdForm.ShowModal;
+            end;
+        05: begin
+              if not TestaToleranciaHoraEcf then
+                Abort;
+              ArqMfdEdForm := TArqMfdEdForm.Create(Self);
+              ArqMfdEdForm.ShowModal;
+            end;
+        06: begin
+              if Application.MessageBox('Deseja gerar o arquivo da Tabela de Produtos?', 'Pergunta do Sistema', Mb_YesNo + Mb_IconQuestion) = IdYes then
+                begin
+                  WPAF := TuPAF.Create;
+                  WPAF.GeraArquivoProdutos;
+                  WPAF.Free;
+                end;
+            end;
+        07: begin
+              ExpEstEdForm := TExpEstEdForm.Create(Self);
+              ExpEstEdForm.ShowModal;
+            end;
+        08: begin
+              MovEcfEdForm := TMovEcfEdForm.Create(Self);
+              MovEcfEdForm.ShowModal;
+            end;
+        09: begin
+              MeiPagEdForm := TMeiPagEdForm.Create(Self);
+              MeiPagEdForm.ShowModal;
+            end;
+        10: begin
+              //MessageBox(Handle,'Função não suportada pelo modelo do ECF utilizado!','ATENÇÃO',MB_ICONWARNING+MB_OK);
+              DAVEmiEdForm := TDAVEmiEdForm.Create(Self);
+              DAVEmiEdForm.ShowModal;
+              DAVEmiEdForm.Free;
+            end;
+        11: begin
+              if Application.MessageBox('Deseja imprimir o relatório IDENTIFICAÇÃO DO PAF-ECF?', 'Pergunta do Sistema', Mb_YesNo + Mb_IconQuestion) = IdYes then
+                begin
+                  WPAF := TuPAF.Create;
+                  WPAF.ImprimeIdentificacaoPAFECF;
+                  WPAF.Free;
+                end;
+            end;
+        12: begin
+              VenPerEdForm := TVenPerEdForm.Create(Self);
+              VenPerEdForm.ShowModal;
+            end;
+        13: begin
+              MessageBox(Handle,'Este PAF-ECF não executa funções de baixa de estoque com base em índices técnicos de produção, não podendo ser utilizado ' +
+                                'por estabelecimento que necessite deste recurso','ATENÇÃO',MB_ICONWARNING+MB_OK);
+            end;
+        14: begin
+              if MessageBox(Handle,'Confirma impressão do Parametros de Configuração?','Confirmação',MB_ICONQUESTION+MB_YESNO+MB_DEFBUTTON2) = ID_YES then
+                begin
+                  WPAF := TuPAF.Create;
+                  WPAF.ImprimeParamConfig;
+                  WPAF.Free;
+                end;
+            end;   }
+      end;
+
+    end;
+
+  finally
+    FrmMnFisPafEcf.Free;
+  end;
+
+end;
+
+end.
+

@@ -1,0 +1,7 @@
+object PDVDm: TPDVDm
+  OldCreateOrder = False
+  Height = 258
+  HorizontalOffset = 361
+  VerticalOffset = 152
+  Width = 375
+end

@@ -1,0 +1,8 @@
+object FmMnOpcPafECF: TFmMnOpcPafECF
+  Left = 331
+  Height = 240
+  Top = 241
+  Width = 320
+  Caption = 'Menu Opcoes PAF ECF'
+  LCLVersion = '1.0.14.0'
+end

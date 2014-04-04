@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="26">
+      <Unit0>
+        <Filename Value="Project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Project1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="67" Y="11"/>
+        <UsageCount Value="68"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="104"/>
+        <CursorPos X="55" Y="121"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Pdv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Pdv"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="130"/>
+        <CursorPos X="1" Y="151"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="PdvClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvClass"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="47" Y="74"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="PdvConst.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvConst"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="68"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="PdvManual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvManual"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="1" Y="29"/>
+        <UsageCount Value="68"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="PdvPafEcf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvPafEcf"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="143"/>
+        <CursorPos X="28" Y="158"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="MnOpcNfce.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMnOpcNfce"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MnOpcNfce"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="86" Y="10"/>
+        <UsageCount Value="64"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="MnOpcPafECF.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMnOpcPafECF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MnOpcPafECF"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="67" Y="8"/>
+        <UsageCount Value="63"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="PdvNFCe.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvNFCe"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="53"/>
+        <CursorPos X="64" Y="73"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="PdvBD.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvBD"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="68" Y="19"/>
+        <UsageCount Value="57"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="CadCliNfce.lfm"/>
+        <IsPartOfProject Value="True"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="14"/>
+        <CursorPos X="34" Y="14"/>
+        <UsageCount Value="56"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="CadCliNfce.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadCliNfce"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadCliNfce"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="73"/>
+        <CursorPos X="19" Y="89"/>
+        <UsageCount Value="56"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="CadCliPafEcf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadCliPafEcf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadCliPafEcf"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="17" Y="65"/>
+        <UsageCount Value="48"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="CadTipPes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmCadTipPes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="CadTipPes"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="55"/>
+        <CursorPos X="54" Y="69"/>
+        <UsageCount Value="43"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="DmPDV.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PDVDm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DmPDV"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="5" Y="38"/>
+        <UsageCount Value="37"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="MnFisPafEcf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMnFisPafEcf"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MnFisPafEcf"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="68"/>
+        <CursorPos X="19" Y="81"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1946"/>
+        <CursorPos X="1" Y="1961"/>
+        <UsageCount Value="14"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="F:\Viktor\Dropbox\Desenvolvimento\DELPHI\VIA LOGICA\New_PDV\Componentes\ACBR_ATUAL\Fontes\ACBrSerial\ACBrECFClass.pas"/>
+        <UnitName Value="ACBrECFClass"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1550"/>
+        <CursorPos X="61" Y="1566"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="F:\Viktor\Dropbox\Desenvolvimento\DELPHI\VIA LOGICA\New_PDV\Componentes\ACBR_ATUAL\Fontes\ACBrSerial\ACBrECF.pas"/>
+        <UnitName Value="ACBrECF"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="5001"/>
+        <CursorPos X="18" Y="5029"/>
+        <UsageCount Value="10"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\ACBR_ATUAL\Fontes\ACBrSerial\ACBrECF.pas"/>
+        <UnitName Value="ACBrECF"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4060"/>
+        <CursorPos X="1" Y="4076"/>
+        <UsageCount Value="12"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\ACBR_ATUAL\Fontes\ACBrSerial\ACBrECFBematech.pas"/>
+        <UnitName Value="ACBrECFBematech"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="748"/>
+        <CursorPos X="35" Y="763"/>
+        <UsageCount Value="12"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="C:\ACBR_ATUAL\Fontes\synalist\synaser.pas"/>
+        <UnitName Value="synaser"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2110"/>
+        <CursorPos X="1" Y="2125"/>
+        <UsageCount Value="12"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="C:\ACBR_ATUAL\Fontes\ACBrSerial\ACBrECFSwedaSTX.pas"/>
+        <UnitName Value="ACBrECFSwedaSTX"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1436"/>
+        <CursorPos X="1" Y="1453"/>
+        <UsageCount Value="10"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="C:\ACBR_ATUAL\Fontes\ACBrSerial\ACBrECFClass.pas"/>
+        <UnitName Value="ACBrECFClass"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1733"/>
+        <CursorPos X="23" Y="1750"/>
+        <UsageCount Value="10"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\..\..\..\home\viktor\Documentos\ACBR\trunk\Fontes\ACBrSEF2\ACBrSEF2_Bloco0_1.pas"/>
+        <UnitName Value="ACBrSEF2_Bloco0_1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="499"/>
+        <CursorPos X="21" Y="506"/>
+        <UsageCount Value="10"/>
+      </Unit25>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="144" Column="1" TopLine="130"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="145" Column="1" TopLine="130"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="147" Column="1" TopLine="130"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="148" Column="1" TopLine="130"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="151" Column="1" TopLine="130"/>
+      </Position5>
+      <Position6>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="137" Column="1" TopLine="125"/>
+      </Position6>
+      <Position7>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="139" Column="1" TopLine="125"/>
+      </Position7>
+      <Position8>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="140" Column="1" TopLine="125"/>
+      </Position8>
+      <Position9>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="141" Column="1" TopLine="125"/>
+      </Position9>
+      <Position10>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="142" Column="1" TopLine="125"/>
+      </Position10>
+      <Position11>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="143" Column="1" TopLine="125"/>
+      </Position11>
+      <Position12>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="144" Column="1" TopLine="125"/>
+      </Position12>
+      <Position13>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="145" Column="1" TopLine="125"/>
+      </Position13>
+      <Position14>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="147" Column="1" TopLine="125"/>
+      </Position14>
+      <Position15>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="149" Column="30" TopLine="128"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="142" Column="1" TopLine="130"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="144" Column="1" TopLine="130"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="145" Column="1" TopLine="130"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="147" Column="1" TopLine="130"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="148" Column="1" TopLine="130"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="151" Column="1" TopLine="130"/>
+      </Position21>
+      <Position22>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="140" Column="1" TopLine="128"/>
+      </Position22>
+      <Position23>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="141" Column="1" TopLine="128"/>
+      </Position23>
+      <Position24>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="142" Column="1" TopLine="128"/>
+      </Position24>
+      <Position25>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="143" Column="1" TopLine="128"/>
+      </Position25>
+      <Position26>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="144" Column="1" TopLine="128"/>
+      </Position26>
+      <Position27>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="145" Column="1" TopLine="128"/>
+      </Position27>
+      <Position28>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="147" Column="1" TopLine="128"/>
+      </Position28>
+      <Position29>
+        <Filename Value="PdvPafEcf.pas"/>
+        <Caret Line="148" Column="1" TopLine="128"/>
+      </Position29>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="3">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="PdvPafEcf.pas"/>
+        <Line Value="197"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Pdv.pas"/>
+        <Line Value="142"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="PdvPafEcf.pas"/>
+        <Line Value="145"/>
+      </Item3>
+    </BreakPoints>
+  </Debugging>
+  <EditorMacros Count="0"/>
+</CONFIG>

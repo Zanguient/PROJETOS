@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="teste.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="teste"/>
+        <UsageCount Value="20"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="Unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="23"/>
+        <CursorPos X="1" Y="38"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="Pdv.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Pdv"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="58"/>
+        <CursorPos X="3" Y="88"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="PdvClass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvClass"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="16"/>
+        <CursorPos X="27" Y="78"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="PdvConst.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvConst"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="17" Y="28"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="PdvManual.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PdvManual"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="32" Y="31"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit5>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="20" HistoryIndex="19">
+      <Position1>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="21" Column="58" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="17" Column="53" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="22" Column="39" TopLine="7"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="34" Column="53" TopLine="8"/>
+      </Position4>
+      <Position5>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="18" Column="28" TopLine="7"/>
+      </Position5>
+      <Position6>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="15" Column="23" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="8" Column="25" TopLine="5"/>
+      </Position7>
+      <Position8>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="29" Column="10" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="8" Column="30" TopLine="1"/>
+      </Position9>
+      <Position10>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="42" Column="12" TopLine="29"/>
+      </Position10>
+      <Position11>
+        <Filename Value="PdvClass.pas"/>
+        <Caret Line="25" Column="63" TopLine="6"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="23" Column="51" TopLine="4"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="28" Column="29" TopLine="12"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="34" Column="42" TopLine="10"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="83" Column="14" TopLine="50"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Pdv.pas"/>
+        <Caret Line="62" Column="25" TopLine="34"/>
+      </Position16>
+      <Position17>
+        <Filename Value="PdvManual.pas"/>
+        <Caret Line="17" Column="54" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="36" Column="10" TopLine="13"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="40" Column="14" TopLine="14"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="38" Column="3" TopLine="23"/>
+      </Position20>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Unit1.pas"/>
+        <Line Value="38"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
